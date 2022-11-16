@@ -20,27 +20,20 @@ public class snack4 {
 		// CREO I DUE ARRAY DI LUNGHEZZA DIVERSA
 		
 			// ARRAY 1 PIU' CORTO
-		int[] array1 = new int[3];
+		int[] array1 = new int[22];
 			// ARRAY 2 PIU' LUNGO
-		int[] array2 = new int[22];
+		int[] array2 = new int[3];
 		
 		// ISTANZIO UN VARIABILE PER LA LUNGHEZZA
 		int lengthDiff = 0;
 
 		// IN UNA CONDIZIONE VEDO LA DIFFERENZA TRA GLI ARRAY
-		if (array1.length > array2.length) {
-
-			lengthDiff = array1.length - array2.length;
-			
-		} else if (array1.length < array2.length) {
-
-			lengthDiff = array2.length - array1.length;
-			
-		} else {
-
+		 if(array1.length == array2.length) {
 			System.out.println("The arrays have the same length.");
 			return;
-		};
+		 }else {
+			 lengthDiff = Math.abs(array1.length - array2.length);
+		 }
 
 		// STAMPO LA DIFFERENZA IN CONSOLE
 		System.out.println("DIFF : " + lengthDiff);
