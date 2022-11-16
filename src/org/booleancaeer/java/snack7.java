@@ -17,7 +17,8 @@ public class snack7 {
 		String[] words = { "Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit" };
 		
 		// CREO LA STRINGA UNICA IN ORDINE
-		String word = "";
+		String sentence = "";
+		
 		
 		// VARIABILE PER IDENTIFICARE LA PAROLA CON IL MAGGIOR NUMERO DI CARATTERI start
 		int maximumLength = 0;
@@ -31,10 +32,11 @@ public class snack7 {
 		for (int i = 0; i < words.length; i++){
 			
 			// CONCATENO LE STRINGHE ->
-			word += words[i] + " ";
+			sentence += words[i] + " ";
 			
 			// CONTROLLO SULLA PAROLA + LUNGA
 			if(words[i].length() > maximumLength) {
+				
 				// ASSEGNAZIONE Num
 				maximumLength = words[i].length();
 				longestWord = words[i];
@@ -52,15 +54,15 @@ public class snack7 {
 		
 		// CREO LA STRINGA UNICA IN ORDINE inverso
 		// CON L'AIUTO DI StringBuffer
-		String reverseWord = new StringBuffer(word).reverse().toString();
+		String reverseWord = new StringBuffer(sentence).reverse().toString();
 		
 		
 		// STAMPO I RISULTATI
-		System.out.println("-> " + word);
+		System.out.println("-> " + sentence );
 		System.out.println(reverseWord + " <-");
 		System.out.println("-------------------");
-		System.out.println("La parola più lunga è : " + longestWord + "è lunga : " + maximumLength);
-		System.out.println("La parola più corta è : " + shortword + "è lunga : " + minimumLength );
+		System.out.println("La parola più lunga è : " + longestWord + " è lunga : " + maximumLength);
+		System.out.println("La parola più corta è : " + shortword + " è lunga : " + minimumLength );
 		
 	}
 	
